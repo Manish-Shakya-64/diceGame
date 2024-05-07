@@ -71,14 +71,14 @@ const PlayGame = () => {
 
   return (
     <>
-      <section className="flex w-11/12 justify-between m-auto p-8 ">
+      <section className="flex w-11/12 flex-col items-center gap-4 justify-center lg:flex-row lg:justify-between m-auto p-8 ">
         <div className="flex flex-col items-center justify-center">
           <p className="text-8xl font-bold ">{score}</p>
           Total Score
         </div>
-        <div className="flex flex-col items-end gap-3">
+        <div className="flex flex-col items-center lg:items-end gap-3">
         {error && <p className="text-red-600 text-lg">{error}</p>}
-          <div className="flex gap-3">
+          <div className="flex gap-3 flex-wrap">
             {dice.map((value, i) => (
               <Box
                 key={i}
@@ -108,13 +108,13 @@ const PlayGame = () => {
             Show Rules
           </button>
         </div>
-        {showRlues && <div className="whitespace-nowrap w-max bg-[#FBF1F1] p-5 text-md flex flex-col gap-4 mb-4">
-            <h1 className="font-bold text-3xl">How to play Dice Game</h1>
+        {showRlues && <div className=" w-[80vw] lg:w-max bg-[#FBF1F1] p-5 text-sx lg:text-md flex flex-col gap-4 mb-4 lg:whitespace-nowrap">
+            <h1 className="font-bold  text-xl lg:text-3xl">How to play Dice Game</h1>
             <div className="flex flex-col gap-1">
-            <p>Select any number</p>
-            <p>Click on dice image</p>
-            <p>After click on  dice  if selected number is equal to dice number you will get same point as dice </p>
-            <p>If you get wrong guess then  2 point will be dedcuted </p>
+            <p>1 : Select any number.</p>
+            <p>2 : Click on dice image.</p>
+            <p>3 : After click on  dice  if selected number is equal to dice number you will get same point as dice.</p>
+            <p>4 : If you get wrong guess then  2 point will be dedcuted.</p>
             </div>
         </div>}
         
